@@ -157,6 +157,13 @@ module.exports = (env = {}, argv) => {
               removeStyleTypeAttributes: true
             }
           },
+        },
+        {
+          test: /\.twig$/,
+          use: [
+            'raw-loader',
+            'twig-html-loader'
+          ]
         }
       ]
     },
@@ -182,8 +189,6 @@ module.exports = (env = {}, argv) => {
       ];
 
       const htmlOptions = {
-        template: 'index.html',
-        filename: 'index.html',
         minify: {
           removeScriptTypeAttributes: true,
           removeStyleLinkTypeAttributes: true
@@ -191,7 +196,7 @@ module.exports = (env = {}, argv) => {
       };
 
       fs.readdirSync('./src').forEach(file => {
-        if (/\.html$/i.test(file)) {
+        if (/(\.html|.twig)$/i.test(file)) {
           let options = Object.assign({}, htmlOptions);
 
           options.template = file;
