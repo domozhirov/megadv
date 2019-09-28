@@ -1,7 +1,8 @@
-const path = require('path')
-const webpack = require('webpack')
-const minJSON = require('jsonminify')
-const Fiber = require('fibers')
+const path = require('path');
+const webpack = require('webpack');
+const minJSON = require('jsonminify');
+const Fiber = require('fibers');
+const fs = require('fs');
 
 const plugins = {
   progress: require('webpackbar'),
@@ -14,7 +15,7 @@ const plugins = {
   html: require('html-webpack-plugin'),
   copy: require('copy-webpack-plugin'),
   sri: require('webpack-subresource-integrity')
-}
+};
 
 module.exports = (env = {}, argv) => {
   const isProduction = argv.mode === 'production'
@@ -78,9 +79,11 @@ module.exports = (env = {}, argv) => {
               loader: 'sass-loader',
               options: {
                 implementation: require('sass'),
-                fiber: Fiber,
-                outputStyle: 'expanded',
-                sourceMap: !isProduction
+                sourceMap: !isProduction,
+                sassOptions: {
+                  outputStyle: 'expanded',
+                  fiber: require('fibers'),
+                },
               }
             }
           ]
@@ -173,18 +176,30 @@ module.exports = (env = {}, argv) => {
         new plugins.extractCSS({
           filename: 'styles/[name].css'
         }),
-        new plugins.html({
-          template: 'index.html',
-          filename: 'index.html',
-          minify: {
-            removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true
-          }
-        }),
         new plugins.progress({
           color: '#5C95EE'
         })
-      ]
+      ];
+
+      const htmlOptions = {
+        template: 'index.html',
+        filename: 'index.html',
+        minify: {
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true
+        }
+      };
+
+      fs.readdirSync('./src').forEach(file => {
+        if (/\.html$/i.test(file)) {
+          let options = Object.assign({}, htmlOptions);
+
+          options.template = file;
+          options.filename = file;
+
+          common.push(new plugins.html(options));
+        }
+      });
 
       const production = [
         new plugins.clean(),
@@ -200,7 +215,7 @@ module.exports = (env = {}, argv) => {
           hashFuncNames: ['sha384'],
           enabled: true
         })
-      ]
+      ];
 
       const development = [
         new plugins.sync(
@@ -213,7 +228,7 @@ module.exports = (env = {}, argv) => {
             reload: false
           }
         )
-      ]
+      ];
 
       return isProduction
         ? common.concat(production)
@@ -234,7 +249,7 @@ module.exports = (env = {}, argv) => {
     },
 
     stats: 'errors-only'
-  }
+  };
 
   return config
-}
+};
