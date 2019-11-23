@@ -1,6 +1,14 @@
 // Bootstrap Core
 @import 'vendor/bootstrap/core';
 
+// Animate.css Core
+@import 'vendor/animate/core';
+
 // App specific
 @import 'app/variables';
+@import 'app/fonts';
 @import 'app/base';
+
+// App components
+@import "components/scroll-to-top";
+@import "components/social-buttons";

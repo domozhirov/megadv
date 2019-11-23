@@ -1,34 +1,31 @@
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: $body-bg;
   font-family: $body-font;
-  color: $gray-700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
+  color: $body-color;
+  padding: 0;
+  min-width: 320px;
 }
 
-.image {
-  padding: $thumbnail-padding;
-  background-color: $thumbnail-bg;
-  border: $thumbnail-border-width solid $thumbnail-border-color;
-  @include border-radius($thumbnail-border-radius);
-  @include box-shadow($thumbnail-box-shadow);
+.site-wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template:  auto 1fr auto / 1fr;
+}
 
-  img {
-    @include img-fluid;
-  }
+.secondary-bg {
+  background-color: $secondary-bg;
+}
 
-  span {
-    padding-top: $thumbnail-padding;
-    padding-right: $thumbnail-padding;
-    padding-left: $thumbnail-padding;
-    color: $gray-600;
-    display: block;
-    font: {
-      weight: 400;
-      size: 0.8rem;
-    }
-  }
+.with-gutter {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+}
+
+.footer-with-gutter {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

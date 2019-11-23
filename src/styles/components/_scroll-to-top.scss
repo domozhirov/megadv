@@ -1,0 +1,41 @@
+.scroll-to-top {
+    width: 80px;
+    height: 75px;
+    border: 2px solid rgb($input-border-color, .1);
+    box-sizing: border-box;
+    border-radius: $input-border-radius;
+    display: inline-block;
+    padding: 12px 15px;
+    color: $white;
+    text-decoration: none;
+    transition: all .1s ease;
+    font-size: 15px;
+    line-height: 18px;
+
+    &--with-icon {
+        padding-top: 15px;
+
+        &::before {
+            height: 20px;
+            display: block;
+            content: "";
+            background: url(~images/top-array.svg) 50% 0 no-repeat;
+            margin-bottom: 10px;
+        }
+    }
+
+    &:hover {
+        color: $white;
+        border-color: rgb($input-border-color, .4);
+        text-decoration: none;
+
+        &::before {
+            animation-name: small-bounce;
+            transform-origin: center bottom;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+    }
+}
+
+
