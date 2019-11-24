@@ -13,4 +13,15 @@ $(function () {
 
     $navigationWrapper.pudgeJS('toggle');
   });
+
+  $('.owl-carousel').owlCarousel({
+    items: 1,
+    loop: false,
+    margin: 0,
+    nav: true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true
+  });
 });

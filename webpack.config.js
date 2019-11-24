@@ -123,7 +123,7 @@ module.exports = (env = {}, argv) => {
                   enabled: false
                 },
                 pngquant: {
-                  quality: '65-90',
+                  quality: [.65, .9],
                   speed: 4
                 },
                 gifsicle: {
