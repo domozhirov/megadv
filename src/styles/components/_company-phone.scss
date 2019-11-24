@@ -1,0 +1,50 @@
+.company-phone {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 48px;
+    background: url(~images/phone.svg) 0 4px no-repeat;
+
+    &__item {
+        white-space: nowrap;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    @media all and (max-width: map-get($grid-breakpoints, "xl")-1) {
+        & {
+            margin-bottom: 12px;
+        }
+    }
+
+    @media all and (max-width: map-get($grid-breakpoints, "smd")) {
+        & {
+            background: none;
+            margin: 0 0 0 10px;
+            padding: 0;
+
+            &__item:not(:first-child) {
+                display: none;
+            }
+
+            &__item:first-child a {
+                display: block;
+                font-size: 0;
+                line-height: 0;
+                border: 2px solid rgba(255, 255, 255, .1);
+                border-radius: $input-border-radius;
+                width: 46px;
+                height: 46px;
+                background: url(~images/phone.svg) 50% 50% no-repeat;
+                background-size: 21.91px 21.91px;
+            }
+        }
+    }
+}

@@ -1,3 +1,16 @@
 $(function () {
-  console.log('DOM is ready. Write some jQuery or whatever...')
-})
+  const $navigationWrapper = $('.site-navigation-wrapper');
+
+  // header-menu
+  resizeController([0, 1023], 1024, function() {
+    $navigationWrapper.pudgeJS();
+  }, function () {
+    $navigationWrapper.pudgeJS('destroy');
+  });
+
+  $('.site-navigation-button').click(function (event) {
+    event.preventDefault();
+
+    $navigationWrapper.pudgeJS('toggle');
+  });
+});

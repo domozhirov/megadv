@@ -10,5 +10,11 @@
 @import 'app/base';
 
 // App components
+@import "components/site-header-container";
 @import "components/scroll-to-top";
 @import "components/social-buttons";
+@import "components/company-logo";
+@import "components/company-description";
+@import "components/company-phone";
+@import "components/company-email";
+@import "components/site-navigation";

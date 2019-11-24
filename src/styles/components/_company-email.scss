@@ -1,0 +1,30 @@
+.company-email {
+    margin-left: 45px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    white-space: nowrap;
+
+    &__item--title {
+        color: rgba($white, .5);
+    }
+
+    &__item--body {
+        margin-left: 18px;
+
+        a {
+            text-decoration: none;
+            color: $white;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    @media all and (max-width: map-get($grid-breakpoints, "smd")) {
+        & {
+            display: none !important;
+        }
+    }
+}

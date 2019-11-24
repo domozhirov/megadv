@@ -1,2 +1,5 @@
 import './vendor/jquery'
 import './vendor/bootstrap'
+import './vendor/animit.min'
+import './vendor/jquery.pudge'
+import './vendor/resize.controller'

@@ -1,3 +1,8 @@
+html {
+  min-width: 320px;
+  font-size: $font-size-base;
+}
+
 html, body {
   height: 100%;
 }
@@ -6,8 +11,7 @@ body {
   background-color: $body-bg;
   font-family: $body-font;
   color: $body-color;
-  padding: 0;
-  min-width: 320px;
+  padding: 0;;
 }
 
 .site-wrapper {
