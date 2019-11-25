@@ -1,0 +1,205 @@
+.company-contacts-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    &__item {
+        margin-bottom: 20px;
+    }
+}
+
+.company-contacts-title {
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.company-contacts {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        margin-bottom: 20px;
+    }
+
+    &__city {
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+
+    &__address,
+    &__phone,
+    &__worktime {
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        font-size: 14px;
+        line-height: 144.6%;
+        margin-bottom: 20px;
+        padding-left: 38px;
+    }
+
+    &__address {
+        background-image: url(~images/point.svg);
+    }
+
+    &__phone {
+        color: #251D2E;
+        background-image: url(~images/contact-phone.svg);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__worktime {
+        background-image: url(~images/clock.svg);
+    }
+}
+
+.company-contact-map {
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+@media all and (min-width: map-get($grid-breakpoints, "md")-1) {
+    .company-contacts-container {
+        margin-bottom: 0;
+
+        &__item {
+            margin-bottom: 50px;
+        }
+    }
+
+    .company-contacts-title {
+        font-size: 37px;
+        line-height: 45px;
+        margin-bottom: 50px;
+    }
+
+    .company-contacts {
+        flex-direction: row;
+        margin: 0 -10px;
+
+        &__item {
+            padding: 0 10px
+        }
+
+        &__city {
+            text-align: left;
+        }
+
+        &__address,
+        &__phone,
+        &__worktime {
+            margin-bottom: 25px;
+        }
+    }
+
+    .company-contact-map {
+        padding: 30px;
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, "lg")-1) {
+    .company-contacts-container {
+        flex-direction: row;
+        margin-bottom: 120px;
+
+        &__item {
+            margin: 0;
+        }
+    }
+
+    .company-contacts-title {
+        font-size: 45px;
+        line-height: 55px;
+        margin-bottom: 60px;
+    }
+
+    .company-contacts {
+        flex-direction: column;
+        margin: 0;
+        padding-right: 30px;
+
+        &__item {
+            padding: 0;
+            margin-bottom: 29px;
+        }
+
+        &__city {
+            margin-bottom: 30px;
+        }
+
+        &__address,
+        &__phone,
+        &__worktime {
+            font-size: 15px;
+            margin-bottom: 11px;
+        }
+
+        &__phone {
+            font-size: 17px;
+            line-height: 21px;
+            margin-bottom: 29px;
+        }
+    }
+
+    .company-contact-map {
+        width: 552px;
+        height: 446px;
+    }
+}
+
+
+@media all and (min-width: map-get($grid-breakpoints, "xl")) {
+    .company-contacts-container {
+        margin-bottom: 163px;
+    }
+
+    .company-contacts-title {
+        font-size: 55px;
+        line-height: 67px;
+        margin-bottom: 70px;
+    }
+
+    .company-contacts {
+        padding-right: 90px;
+
+        &__item {
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        &__address,
+        &__phone,
+        &__worktime {
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 30px;
+        }
+
+        &__phone {
+            font-size: 17px;
+            line-height: 21px;
+        }
+    }
+
+    .company-contact-map {
+        width: 700px;
+        height: 599px;
+    }
+}
