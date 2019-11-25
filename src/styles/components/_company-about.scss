@@ -1,0 +1,148 @@
+.company-about {
+    max-width: map-get($container-max-widths, 'xl')+100;
+    margin: 0 auto 60px;
+
+    &__text {
+        color: #fff;
+        background: #251D2E;
+        text-align: center;
+        padding: 30px 30px 90px;
+    }
+
+    &__certificate {
+        position: relative;
+        z-index: 1;
+        margin-top: -30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 30px;
+    }
+}
+
+.company-about-title {
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 33px;
+    margin-bottom: 30px;
+}
+
+.company-about-body {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.401;
+}
+
+.company-about-certificate-icon {
+    margin-bottom: 20px;
+}
+
+.company-about-certificate-title {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 30px;
+}
+
+@media all and (min-width: map-get($grid-breakpoints, "sm")) {
+    .company-about {
+        margin-bottom: 63px;
+
+        &__text  {
+            padding: 50px 50px 100px;
+        }
+
+        &__certificate {
+            margin-top: -50px;
+            display: flex;
+        }
+    }
+
+    .company-about-title {
+        margin-bottom: 41px;
+        font-size: 37px;
+        line-height: 45px;
+    }
+
+    .company-about-body {
+        font-size: 15px;
+    }
+
+    .company-about-certificate-icon {
+        margin-bottom: 30px;
+    }
+
+    .company-about-certificate-title {
+        font-size: 32px;
+        line-height: 39px;
+        margin-right: 27px;
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, "md")-1) {
+    .company-about {
+
+        &__text  {
+            padding-bottom: 122px;
+        }
+
+        &__certificate {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    }
+
+    .company-about-title {
+        font-size: 45px;
+        line-height: 55px;
+        margin-bottom: 60px;
+    }
+
+    .company-about-certificate-title {
+        font-size: 34px;
+        line-height: 41px;
+    }
+
+    .company-about-certificate-image {
+        flex: 1 1 auto;
+        min-width: 335px;
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, "xl")) {
+    .company-about-wrapper {
+        background: #251D2E;
+    }
+
+    .company-about {
+        padding: 90px 50px 127px;
+        display: flex;
+
+        &__text {
+            text-align: left;
+            width: 100%;
+            flex: 1 1 auto;
+            padding: 0 117px 0 0;;
+        }
+
+        &__certificate {
+            display: block;
+            max-width: 565px;
+            width: 100%;
+            flex: 1 1 auto;
+            margin: 0;
+            padding: 50px;
+        }
+    }
+
+    .company-about-title {
+        margin-bottom: 60px;
+        font-size: 55px;
+        line-height: 67px;
+    }
+
+    .company-about-certificate-title {
+        font-size: 34px;
+        line-height: 41px;
+        margin-bottom: 42px;
+    }
+}

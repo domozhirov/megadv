@@ -1,33 +1,50 @@
 .company-advantages-wrapper {
     position: relative;
     z-index: 1;
-    margin-top: -25px !important;
-    padding: 25px 0 20px;
+    margin-top: 20px !important;
+    padding: 30px 30px 40px;
 }
 
 .company-advantages-title {
     color: #251D2E;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 25px;
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 40px;
+}
+
+.company-advantages {
+    flex-direction: column;
+
+    &__item:not(:last-child) {
+        margin-bottom: 56px;
+    }
 }
 
 .company-advantage {
+
     &__item {
         &--icon {
-            margin-bottom: 18px;
+            margin-bottom: 31px;
             min-height: 36px;
         }
         &--title {
             font-weight: 500;
-            font-size: 11px;
-            line-height: 16px;
+            font-size: 17px;
+            line-height: 21px;
         }
     }
 }
 
 @media all and (min-width: map-get($grid-breakpoints, "sm")) {
+    .company-advantages {
+        flex-direction: row;
+
+        &__item {
+            margin: 0 !important;
+        }
+    }
+
     .company-advantages-wrapper {
         margin-top: -50px !important;
         padding: 50px 0 40px;

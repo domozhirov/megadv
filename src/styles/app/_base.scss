@@ -24,6 +24,12 @@ body {
   background-color: $secondary-bg;
 }
 
+@media all and (min-width: map-get($grid-breakpoints, "md")-1) {
+  .bg-lg-secondary {
+    background-color: $secondary-bg;
+  }
+}
+
 .with-gutter {
   min-width: 320px;
   max-width: 100vw;
