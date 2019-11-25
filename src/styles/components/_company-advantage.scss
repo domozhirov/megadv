@@ -1,0 +1,76 @@
+.company-advantages-wrapper {
+    position: relative;
+    z-index: 1;
+    margin-top: -25px !important;
+    padding: 25px 0 20px;
+}
+
+.company-advantages-title {
+    color: #251D2E;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+
+.company-advantage {
+    &__item {
+        &--icon {
+            margin-bottom: 18px;
+            min-height: 36px;
+        }
+        &--title {
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 16px;
+        }
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, "sm")) {
+    .company-advantages-wrapper {
+        margin-top: -50px !important;
+        padding: 50px 0 40px;
+    }
+
+    .company-advantages-title {
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 52px;
+    }
+
+    .company-advantage {
+        &__item {
+            &--icon {
+                margin-bottom: 25px;
+            }
+            &--title {
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 21px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, "md")-1) {
+    .company-advantages-wrapper {
+        padding: 60px 14px 70px;
+        margin-top: -60px !important;
+    }
+
+    .company-advantages-title {
+        font-size: 37px;
+        line-height: 45px;
+        margin-bottom: 72px;
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, "lg")) {
+    .company-advantages-wrapper {
+        padding: 60px 14px 70px;
+    }
+}
+
+
+

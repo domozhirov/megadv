@@ -1,21 +1,22 @@
 .company-description {
     font-weight: 500;
-    font-size: 17px;
-    line-height: 21px;
+    font-size: 11px;
+    line-height: 13px;
     color: rgba($white, .5);
-
-    @media all and (max-width: map-get($grid-breakpoints, "md")-1) {
-        & {
-            font-size: 15px;
-            line-height: 18px;
-        }
-    }
+    text-align: left;
 
     @media all and (max-width: map-get($grid-breakpoints, "smd")) {
         & {
             font-size: 11px;
             line-height: 13px;
             text-align: center;
+        }
+    }
+
+    @media all and (min-width: map-get($grid-breakpoints, "smd")+1) {
+        & {
+            font-size: 15px;
+            line-height: 18px;
         }
     }
 }

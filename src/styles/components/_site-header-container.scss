@@ -10,7 +10,7 @@
         }
     }
 
-    @media all and (min-width: map-get($grid-breakpoints, "lg")-1) {
+    @media all and (min-width: map-get($grid-breakpoints, "lg")) {
         & {
             padding: 35px 50px;
         }

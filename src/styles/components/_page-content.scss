@@ -1,0 +1,97 @@
+.page-content {
+    &--with-padding {
+        padding: 30px 0;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 26px;
+        color: #251D2E;
+        margin-bottom: 30px;
+    }
+
+    &__subtitle {
+        font-size: 17px;
+        margin-bottom: 17px;
+    }
+
+    &__body {
+        font-size: 15px;
+        line-height: 1.25;
+        text-align: center;
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, "md")-1) {
+    .page-content {
+        &--with-padding {
+            padding: 70px 0 50px;
+        }
+
+        &__title {
+            font-size: 37px;
+            line-height: 45px;
+            margin-bottom: 31px;
+        }
+
+        &__subtitle {
+            font-size: 21px;
+            margin-bottom: 31px;
+            font-weight: bold;
+        }
+
+        &__body {
+            font-size: 19px;
+            line-height: 1.691;
+            font-weight: 600;
+        }
+    }
+}
+
+
+@media all and (min-width: map-get($grid-breakpoints, "lg")) {
+    .page-content {
+        &--with-padding {
+            padding: 100px 0 70px;
+        }
+
+        &__title {
+            font-size: 37px;
+            line-height: 45px;
+            margin-bottom: 40px;
+        }
+
+        &__subtitle {
+            font-size: 23px;
+            margin-bottom: 31px;
+        }
+
+        &__body {
+            font-size: 20px;
+        }
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, "xl")) {
+    .page-content {
+        &--with-padding {
+            padding: 120px 0 70px;
+        }
+
+        &__title {
+            font-size: 55px;
+            line-height: 67px;
+            margin-bottom: 46px;
+        }
+
+        &__subtitle {
+            margin-bottom: 40px;
+        }
+
+        &__body {
+            font-size: 22px;
+        }
+    }
+}
+
