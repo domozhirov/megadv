@@ -1,5 +1,14 @@
 .btn-primary-gradient {
+    border: none;
+    line-height: 1.55;
+    color: $white;
     background: linear-gradient(90deg, #C93939, #F96338);
+    transition: none;
+
+    &:hover {
+        color: $white;
+        background: $primary;
+    }
 }
 
 .btn-primary-hover-gradient {

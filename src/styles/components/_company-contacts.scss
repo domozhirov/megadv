@@ -131,12 +131,12 @@
     }
 
     .company-contacts {
-        flex-direction: column;
-        margin: 0;
-        padding-right: 30px;
+        //flex-direction: column;
+        margin: 0 -15px !important;
+        //padding-right: 30px;
 
         &__item {
-            padding: 0;
+            padding: 0 15px;
             margin-bottom: 29px;
         }
 
@@ -177,10 +177,10 @@
     }
 
     .company-contacts {
-        padding-right: 90px;
+        //padding-right: 90px;
 
         &__item {
-            padding: 0;
+            //padding: 0;
             margin-bottom: 10px;
         }
 

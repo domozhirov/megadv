@@ -22,7 +22,7 @@
         }
     }
 
-    @media all and (max-width: map-get($grid-breakpoints, "sm")) {
+    @media all and (max-width: map-get($grid-breakpoints, "sm")-170) {
         & {
             font-size: 18px;
             line-height: 22px;
