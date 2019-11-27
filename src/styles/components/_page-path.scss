@@ -1,0 +1,21 @@
+.page-path {
+    display: none;
+    justify-content: center;
+    padding: 21px 0;
+
+    &__item {
+        font-size: 15px;
+        line-height: 18px;
+
+        &:not(:last-child) {
+            padding-right: 37px;
+            background: url(~images/path-arrow.svg) right 15px top 50% no-repeat;
+        }
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, "md")-1) {
+    .page-path {
+        display: flex;
+    }
+}

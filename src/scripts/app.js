@@ -14,6 +14,12 @@ $(function () {
     $navigationWrapper.pudgeJS('toggle');
   });
 
+  $('.site-navigation-buttons__close').click(function (event) {
+    event.preventDefault();
+
+    $navigationWrapper.pudgeJS('close');
+  });
+
   const $owlCarousel = $('.owl-carousel');
   const owlCarouselCommonOptions = {};
 
