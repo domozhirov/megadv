@@ -18,10 +18,19 @@
 
 @media all and (min-width: map-get($grid-breakpoints, "lg")) {
     .site-navigation-wrapper {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 2;
         max-width: 100vw;
         overflow: auto;
         padding: 0 7px;
         background: linear-gradient(90deg, #C93939 0%, #F96338 100%);
+        box-shadow: 5px 0 5px rgba(0, 0, 0, .2);
+
+        .admin-bar & {
+            top: 32px;
+        }
     }
 
     .site-navigation-wrapper::-webkit-scrollbar {
@@ -60,6 +69,7 @@
 
 @media all and (min-width: map-get($grid-breakpoints, "lg")-1) and (max-width: map-get($grid-breakpoints, "xl")) {
     .site-navigation {
+
         &__item {
             padding: 15px 20px;
             font-size: 17px;

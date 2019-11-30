@@ -1,5 +1,6 @@
 $(function () {
   const $navigationWrapper = $('.site-navigation-wrapper');
+  const $root = $('html, body');
 
   // header-menu
   resizeController([0, 1023], 1024, function() {
@@ -18,6 +19,37 @@ $(function () {
     event.preventDefault();
 
     $navigationWrapper.pudgeJS('close');
+  });
+
+  $('table').wrapAll('<div class="table-wrapper"/>');
+
+  $('.site-navigation a').on('click', function (event) {
+    const $container = $(this.hash);
+    const pudgeJS = $navigationWrapper.data('pudgeJS');
+
+    if ($container.length && document.location.pathname === '/') {
+      console.log(pudgeJS);
+      if (window.outerWidth < 769) {
+        pudgeJS.close();
+        event.preventDefault();
+
+        setTimeout(() => {
+          $root.animate({
+            scrollTop: $container.offset().top - $('.site-header').height(),
+          }, 300);
+        }, 300);
+      } else {
+        $root.animate({
+          scrollTop: $container.offset().top - $('.site-navigation-wrapper').height() + 1,
+        }, 600);
+      }
+    }
+  });
+
+  $('.scroll-to-top').click(function (event) {
+    $root.animate({
+      scrollTop: 0,
+    }, 300);
   });
 
   const $owlCarousel = $('.owl-carousel');

@@ -102,11 +102,11 @@
         font-size: 34px;
         line-height: 41px;
         margin-right: 0;
+        flex: 1 1 auto;
     }
 
     .company-about-certificate-image {
-        flex: 1 1 auto;
-        min-width: 335px;
+        max-width: 335px;
     }
 }
 
@@ -156,5 +156,9 @@
         font-size: 34px;
         line-height: 41px;
         margin-bottom: 42px;
+    }
+
+    .company-about-certificate-image {
+        max-width: 500px;
     }
 }
