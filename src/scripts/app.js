@@ -21,7 +21,7 @@ $(function () {
     $navigationWrapper.pudgeJS('close');
   });
 
-  $('table').wrapAll('<div class="table-wrapper"/>');
+  $('table').wrap('<div class="table-wrapper"/>');
 
   if (location.hash) {
     setTimeout(function() {
