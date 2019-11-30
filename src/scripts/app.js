@@ -23,13 +23,26 @@ $(function () {
 
   $('table').wrapAll('<div class="table-wrapper"/>');
 
+  if (location.hash) {
+    setTimeout(function() {
+      const $container = $(location.hash);
+
+      if ($container.length) {
+        if (window.outerWidth < 1024) {
+          window.scrollTo(0, $container.offset().top - $('.site-header').height());
+        } else {
+          window.scrollTo(0, $container.offset().top - $('.site-navigation-wrapper').height() + 1);
+        }
+      }
+    }, 1);
+  }
+
   $('.site-navigation a').on('click', function (event) {
     const $container = $(this.hash);
     const pudgeJS = $navigationWrapper.data('pudgeJS');
 
     if ($container.length && document.location.pathname === '/') {
-      console.log(pudgeJS);
-      if (window.outerWidth < 769) {
+      if (window.outerWidth < 1024) {
         pudgeJS.close();
         event.preventDefault();
 
